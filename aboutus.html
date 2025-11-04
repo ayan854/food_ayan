@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <style>
+        /* ===== RESET ===== */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+            background-color: cyan;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        /* ===== HEADER ===== */
+        
+        header {
+            background: #222;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            color: #b2297b;
+            margin-top: 10px;
+        }
+        /* ===== ABOUT SECTION ===== */
+        
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+            gap: 40px;
+        }
+        
+        .about img {
+            width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .about img:hover {
+            transform: scale(1.05);
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.2s ease;
+        }
+        
+        .about-text.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .about-text h2 {
+            font-size: 2rem;
+            color: #222;
+            margin-bottom: 15px;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #dad70a;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            background: #0056b3;
+        }
+        /* ===== TEAM SECTION ===== */
+        
+        .team {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+        }
+        
+        .team h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+        
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .member {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 12px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .member h3 {
+            margin: 10px 0 5px;
+        }
+        
+        .member p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        /* ===== FOOTER ===== */
+        
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>About Us</h1>
+        <p>Learn more about our mission, vision, and amazing team!</p>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <img src="gg.jpg" alt="FoodieHub">
+        <div class="about-text" id="aboutText">
+            <h2>Who We Are</h2>
+            <p>We provide you Delicious foods.The key to a good food website— whether it’s a recipe blog, a restaurant website or selling a product— is photography. When you browse the designs below, notice how all the best designs have excellent photography.
+                A good food website design don’t need to be ornamental— it can be simple and straightforward in order to let the food photography shine. It’s not that branding isn’t important, it’s just that it’s best communicated through colors and logos.</p>
+            <p>With years of experience and a drive for excellence, we continue to push boundaries and set new standards in our industry.</p>
+            <a href="#team" class="btn">Meet Our Team</a>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="team" id="team">
+        <h2>Our Amazing Team</h2>
+        <div class="team-container">
+            <div class="member">
+                <img src="s2.jpg" alt="Member 1">
+                <h3>Jane Doe</h3>
+                <p>Founder of FoodieHub</p>
+            </div>
+            <div class="member">
+                <img src="s3.jpg" alt="Member 2">
+                <h3>Suman Sen</h3>
+                <p>Lead Sheff</p>
+            </div>
+            <div class="member">
+                <img src="s4.jpg" alt="Member 3">
+                <h3>Sarah Johnson</h3>
+                <p>Co-lead Sheff</p>
+            </div>
+
+            <div class="member">
+                <img src="s1.jpg" alt="Member 4">
+                <h3>Devid Crawly</h3>
+                <p>Sheff</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; FoodieHub. All rights reserved.
+    </footer>
+
+    <script>
+        // Reveal animation on scroll
+        window.addEventListener('scroll', function() {
+            const aboutText = document.getElementById('aboutText');
+            const rect = aboutText.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight - 100) {
+                aboutText.classList.add('show');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

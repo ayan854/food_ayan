@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Gallery</title>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #fff8f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #ff7043;
+            color: white;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        /* Lightbox */
+        
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .lightbox:active {
+            display: none;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            background: #ff7043;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🍕 Food Gallery 🍔</h1>
+        <p>Delicious dishes to make your mouth water!</p>
+    </header>
+
+    <section class="gallery">
+        <img src="g1.jpg" alt="Pizza">
+        <img src="g2.jpg" alt="Burger">
+        <img src="g3.jpg" alt="Pasta">
+        <img src="g4.jpg" alt="Beriany">
+        <img src="g5.jpg" alt="Dessert">
+        <img src="g6.jpg" alt="Chicken">
+        <img src="g7.jpg" alt="Egg-Roll">
+        <img src="g8.jpg" alt="Momo">
+
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Preview" />
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Food Gallery | Designed with ❤</p>
+    </footer>
+
+    <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+
+        document.querySelectorAll(".gallery img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = "none";
+        }
+
+        // Close on background click
+        lightbox.addEventListener("click", e => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

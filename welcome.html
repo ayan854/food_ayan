@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('s12.jpg') no-repeat center center/cover;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: #1e0189;
+            text-align: center;
+        }
+        
+        p {
+            color: white;
+            font-size: 1.2rem;
+            max-width: 800px;
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+        
+        button {
+            background-color: yellow;
+            color: #e30b0b;
+            font-size: 1.5rem;
+            font-weight: 900;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 40px;
+        }
+        
+        button:hover {
+            background-color: rgb(143, 47, 226);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .bubbles {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            gap: 15px;
+            font-size: 50px;
+            animation: floatBubbles 4s linear infinite;
+        }
+        
+        @keyframes floatBubbles {
+            0% {
+                transform: translateY(0) rotate(0deg)scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-200px) rotate(180deg)scale(2);
+                opacity: 1;
+            }
+            75% {
+                transform: translateY(-200px) rotate(360deg)scale(1.5);
+                opacity: 2;
+            }
+            100% {
+                transform: translateY(-400px) rotate(-20deg)scale(0.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Welcome to our site</h1>
+        <p>
+            <strong>
+                Business and legal prerequisites: Business plan: Develop a comprehensive business plan that includes
+                your market research, target audience, and unique selling proposition. Licenses and registrations: Secure
+                all necessary business licenses and food safety registrations, such as an FSSAI license in India, which is
+                mandatory for both the platform and the restaurants it hosts. Restaurant partnerships: Establish
+                partnerships with restaurants that have their own food safety compliance.
+            </strong>
+        </p>
+        <button id="button">Click here</button>
+    </div>
+
+    <div class="bubbles">
+        <span>🍔</span>
+        <span>🍔</span>
+        <span>🍟</span>
+        <span>🍟</span>
+        <span>🍔</span>
+        <span>🍟</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('button').addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+
+</html>

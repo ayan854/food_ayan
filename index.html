@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodieHub | Order Your Favorite Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+
+<script src="your_script.js"></script>
+
+<body>
+    <!--nav section-->
+
+    <nav class="navbar-wrapper">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">
+                <btn-nav id="navigateButton" onclick="sign()">Sign in</btn-nav>
+
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="home" onclick="home()">Home🍔</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="aboutus" onclick="about()">About Us🍟</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="menu" onclick="menu()">Menu🍽</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="food_galary" onclick="gal()">Gallary🥗</a>
+                </li>
+                <li class=" nav-item ">
+                    <a href="# " class="nav-link " id="contact" onclick="contact()">Contact us☎️</a>
+                </li>
+            </ul>
+        </nav>
+    </nav>
+    <!--header-->
+    <header>
+        <div class="con-img ">
+
+            <div class="img-container-mid">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836 " alt="Delicious Food ">
+                <div class="im ">Delicious Vibes 🍽</div>
+
+            </div>
+
+            <div class="img-container-mid ">
+                <img src="i1.jpg " alt="Favorite fOOds ">
+                <div class="im ">Favorite fOOds</div>
+
+            </div>
+
+            <div class="img-container-mid ">
+                <img src="i2.jpg " alt="Delicious Food ">
+                <div class="im ">Awsome Feeling</div>
+
+            </div>
+
+            <div class="img-container-mid ">
+                <img src="i4.jpg " alt="Delicious Food ">
+                <div class="im ">FoodieHub</div>
+
+            </div>
+
+
+
+
+
+        </div>
+        </div>
+
+        <div class="cts" style="display: flex;flex-wrap: wrap;padding: 40px;gap: 100px;align-items: center;justify-content: center;">
+
+            <div class="container-desc-left">
+                <h2 style="color: #f1ee08;background-color: transparent;border: 1px solid rgb(236, 73, 13);font-size: 16px;font-weight: 80-align: center;">prerequisites</h2>
+                <button onclick="toggleDescription()">Show Description</button>
+
+                <div id="descriptionBox" class="description">
+                    <p>Business and legal prerequisites Business plan: Develop a comprehensive business plan that includes your market research, target audience, and unique selling proposition. Licenses and registrations: Secure all necessary business licenses
+                        and food safety registrations, such as an FSSAI license in India, which is mandatory for both the platform and the restaurants it hosts. Restaurant partnerships: Establish partnerships with restaurants that have their own food
+                        safety compliance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="con-right">
+                <img src="b1.jpg " alt=" " style="border-radius: 20px; box-shadow: 2px 2px 5px 3px#e56f08;">
+
+            </div>
+
+
+            <div class="container-desc-right">
+                <h2 style="color: #f1ee08;background-color: transparent;border: 1px solid rgb(236, 73, 13);font-size: 16px;font-weight: 80-align: center;">Requisites</h2>
+                <button class="btn" onclick="toggleDescription_right()">Click Me✅</button>
+
+                <div id="descriptionBox2" class="description2">
+                    <p>This is a sample product description. It appears when you click the button and disappears when clicked again.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+
+        <div class="button-container">
+            <button class="order-btn" onclick="func() "><span>Order Now</span></button>
+        </div>
+        <!--      <div class="span-con">
+            <span>T</span>
+            <span>H</span>
+            <span>A</span>
+
+            <span>N</span>
+            <span>K</span>
+            <span>S</span>
+            <span></span>
+
+            <span>F</span>
+            <span>O</span>
+            <span>R</span>
+            <span></span>
+
+            <span>W</span>
+            <span>A</span>
+            <span>T</span>
+            <span>C</span>
+            <span>H</span>
+            <span>I</span>
+            <span>N</span>
+            <span>G</span>
+
+
+        </div>--->
+    </header>
+
+    <!---menu section-->
+
+    <section class="menu" id="menu">
+
+
+        <h2 style="color: aliceblue;border-radius: 10px;border: 2px solid goldenro-align: center;margin: 0 22px;">List Items</h2>
+
+        <div class="container" id="open_menu" style="padding: 0px 15px;">
+
+            <div class="food-list" style="color: blue;">
+                <div class="food-item">
+                    <img src="1.jpg" alt="Burger" />
+                    <h3>Cheese Burger</h3>
+                    <p style="color: lightgreen;">₹150</p>
+                    <button class="cart-btn" onclick="addToCart('Cheese Burger', 150)">Add to Cart</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="2.jpg" alt="Pizza" />
+                    <h3>Margherita Pizza</h3>
+                    <p style="color: lightgreen;">₹220</p>
+                    <button class="cart-btn" onclick="addToCart('Margherita Pizza', 220)">Add to Cart</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="3.jpg" alt="Pasta" />
+                    <h3>White Sauce Pasta</h3>
+                    <p style="color: lightgreen;">₹180</p>
+                    <button class="cart-btn" onclick="addToCart('White Sauce Pasta', 180)">Add to Cart</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="3.jpg" alt="Momo" />
+                    <h3>Chicken Momo</h3>
+                    <p style="color: lightgreen;">₹250</p>
+                    <button onclick="addToCart('Chicken Momo', 250)">Add to Cart</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="3.jpg" alt="Chicken-Manchurian" />
+                    <h3>Chicken-Manchurian</h3>
+                    <p style="color: lightgreen;">₹200</p>
+                    <button onclick="addToCart('Chicken-Manchurian', 200)">Add to Cart</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="3.jpg" alt="Fried Rice" />
+                    <h3>Fried Rice</h3>
+                    <p style="color: lightgreen;">₹300</p>
+                    <button class="cart-btn" onclick="addToCart('Fried Rice', 300)">Add to Cart</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="3.jpg" alt="Fried Rice" />
+                    <h3>Fried Rice</h3>
+                    <p style="color: lightgreen;">₹300</p>
+                    <button class="cart-btn" onclick="addToCart('Fried Rice', 300)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="3.jpg" alt="Fried Rice" />
+                    <h3>Fried Rice</h3>
+                    <p style="color: lightgreen;">₹300</p>
+                    <button class="cart-btn" onclick="addToCart('Fried Rice', 300)">Add to Cart</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="b2" style="padding: 20px;">
+            <button id="toggleCart">🛒 View Cart</button>
+        </div>
+
+        <div class="cart" id="cart">
+            <h3 style="color: aliceblue;font-size: 20px;font-weight: 900; ">Your Cart</h3>
+
+            <div id="cart-items"></div>
+            <p class="total" id="total" style="font-size: larger;font-weight: 600;color: #f1ee08; ">Total: ₹0</p>
+
+        </div>
+    </section>
+
+
+
+    <!--testimonial-->
+    <section class="testimonial">
+        <div class="container-testimonial ">
+            <div class="testimonial-heading ">
+                <h2 style="color: #e56f08; ">What Our Clients Say</h2>
+                <p style="color: rgb(237, 230, 237); font-size: 18px"><strong>Best place to get breakfast! I had eggs mulligan, the homemade corned beef is to die for! My love had potato pancakes which he thoroughly enjoyed too! Waitress was vibrant and attentive. – Heather S.</strong></p>
+            </div>
+
+            <div class="testimonial-box-wrapper ">
+
+                <div class="testimonial-box active ">
+                    <div class="reviewer-info ">
+                        <img src="m1.jpg " alt="Purnendu Ghosh ">
+                        <div>
+                            <h4>Purnendu Ghosh</h4>
+                            <p>24 May, 2020</p>
+                        </div>
+                    </div>
+                    <ul class="rating ">
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                    </ul>
+                    <p class="revie ">“Very good choice for breakfast. The homemade hash is a must. A good variety of choices for all tastes..”</p>
+                </div>
+
+                <div class="testimonial-box ">
+                    <div class="reviewer-info ">
+                        <img src="m3.jpg " alt="Susovon Bera ">
+                        <div>
+                            <h4>Susovon Bera</h4>
+                            <p>10 Aug, 2021</p>
+                        </div>
+                    </div>
+                    <ul class="rating ">
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star-half-stroke "></i></li>
+                    </ul>
+                    <p class="revie ">“The eggs benedict with fried green tomatoes was a risk worth taking! Side fruit cup was super fresh and the service was excellent… ”</p>
+                </div>
+
+
+
+                <div class="testimonial-box ">
+                    <div class="reviewer-info ">
+                        <img src="m2.jpg " alt="Kartik Chakraborty ">
+                        <div>
+                            <h4>Kartik Chakraborty</h4>
+                            <p>10 Aug, 2021</p>
+                        </div>
+                    </div>
+                    <ul class="rating ">
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star-half-stroke "></i></li>
+                    </ul>
+                    <p class="revie ">“The eggs benedict with fried green tomatoes was a risk worth taking! Side fruit cup was super fresh and the service was excellent… ”</p>
+                </div>
+                <div class="testimonial-box ">
+                    <div class="reviewer-info ">
+                        <img src="m4.jpg " alt="Anewsa Biswas ">
+                        <div>
+                            <h4>Anewsa Biswas</h4>
+                            <p>02 Feb, 2022</p>
+                        </div>
+                    </div>
+                    <ul class="rating ">
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-regular fa-star "></i></li>
+                    </ul>
+                    <p class="revie ">“I highly recommend the blueberry crunch pancakes!… – Whistle R”</p>
+                </div>
+
+                <div class="testimonial-box ">
+                    <div class="reviewer-info ">
+                        <img src="m5.jpg " alt="Swastika Bisal ">
+                        <div>
+                            <h4>Swastika Bisal</h4>
+                            <p>02 Feb, 2022</p>
+                        </div>
+                    </div>
+                    <ul class="rating ">
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-solid fa-star "></i></li>
+                        <li><i class="fa-regular fa-star "></i></li>
+                    </ul>
+                    <p class="revie ">“Quis malesuada vitae elit eu sit proin amet. Ullamcorper quis quam enim tortor, id sed vestibulum egestas.”</p>
+                </div>
+
+                <!-- Slider arrows -->
+                <div class="arrow-wrapper ">
+                    <div class="arrow prev "><i class="fa-solid fa-arrow-left "></i></div>
+                    <div class="arrow next "><i class="fa-solid fa-arrow-right "></i></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!---sliders-->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <video src="v1.mp4 " autoplay=" " loop=" " width="50% " style=; ">
+            </video>
+            <div class="desc ">
+                <h2>Explore Food</h2>
+                <p style="color: aliceblue; ">Discover breathtaking landscapes, lush forests, and the serene beauty of the natural world.</p>
+            </div>
+        </div>
+        <div class="slide ">
+            <video src="v2.mp4 " autoplay=" " loop=" " width="50% " style=; "></video>
+                <div class="desc ">
+                    <h2>Delecious Dishes</h2>
+                    <p style="color: aliceblue; ">From Rs 600$ to Rs 10,000 $.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <video src="v3.mp4 " autoplay=" " loop=" " width="50% " style=; "></video>
+            <div class="desc ">
+                <h2>Hygine Maintain</h2>
+                <p  style="color: aliceblue; ">Hygenic fresh and delicious food service</p>
+            </div>
+        </div>
+
+        <div class="slide ">
+            <video src="v4.mp4 " autoplay=" " loop=" " width="50% " style= " "></video>
+
+                <div class="desc ">
+                    <h2>Hygine Maintain</h2>
+                    <p  style="color: aliceblue; ">Hygenic fresh and delicious food service</p>
+                </div>
+            </div>
+
+
+            <div class="slide ">
+                <video src="v5.mp4 " autoplay=" " loop=" " width="50% " style=" " ></video>
+
+            <div class="desc ">
+                <h2>Hygine Maintain</h2>
+                <p  style="color: aliceblue; ">Hygenic fresh and delicious food service</p>
+            </div>
+        </div>
+
+
+
+        <div class="slide ">
+            <video src="v6.mp4 " autoplay=" " loop=" " width="50% " style=; "></video>
+
+                <div class="desc ">
+                    <h2>Hygine Maintain</h2>
+                    <p style="color: aliceblue; ">Hygenic fresh and delicious food service</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="nav " style="margin: 20px 0; "></div>
+    </div>
+
+    <!---footer-->
+    <footer>
+        <div class="container-footer">
+            <div class="footer-content-wrapper" style="display: flex;justify-content: center;align-items: center;padding: 20px;">
+
+                <!-- About / Brand Info -->
+                <div class="box first-box" style="">
+                    <h5 style="font-size: larger;font-weight: 900;color: aquamarine; font-size: larger;">Food Order</h5>
+                    <p style="font-size: larger;">
+                        <summary><strong>
+                            A food order is a request for a specific meal or food item, whether it's a full-course meal or individual items like a sandwich or pizza. The description can be a list of items with specific instructions for preparation and any customizations, often placed
+                            through a digital system (like a website or app) for delivery or pickup. The term can also refer to the entire digital system that facilitates this process, automating ordering, payment, and sometimes delivery tracking. Key
+                            aspects of a food order Items: </strong>
+                        </summary>
+                    </p>
+                    <ul class="social-icon">
+                        <li><a href="# "><i class="fa-brands fa-facebook "></i></a></li>
+                        <li><a href="# "><i class="fa-brands fa-linkedin-in "></i></a></li>
+                        <li><a href="# "><i class="fa-brands fa-instagram "></i></a></li>
+                        <li><a href="# "><i class="fa-brands fa-twitter "></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="box box-mid">
+                    <h5 style="font-size: larger;font-weight: 900;color: aquamarine;">Resources</h5>
+                    <ul class="resource-list" style="font-size: 30px;font-weight: 900;color: rgb(210, 224, 11);">
+                        <li><a href="#" style="font-size: 20px;font-weight: 900;color: rgb(217, 217, 211);">Home</a></li>
+                        <li>
+                            <a href="#" id="toggleLink" style="font-size: 20px;font-weight: 900;color: rgb(217, 217, 211);">About Us</a>
+
+                        </li>
+                        <div class="about-contain" id="aboutContain" style="display: none;">
+                            <p>Twenty-four hours at your service; we are located everywhere.</p>
+                        </div>
+                        <li>
+                            <a href=" # " id="toggleContact" style="font-size: 20px;font-weight: 900;color: rgb(217, 217, 211);">Contact Us</a>
+                            <p id="contactNumber" class="contact-number" style="display:none; " style="font-size: 20px;font-weight: 900;color: rgb(185, 185, 103);">9547146725</p>
+                        </li>
+                        <li class="location">
+                            <button class="btn" id="toggleMapBtn" style="font-size: 20px;font-weight: 900;color: rgb(217, 217, 211);">Show Location</button>
+                            <div id="mapFrame" class="map-frame">
+                                <iframe src="https://www.google.com/maps?q=Kolkata&output=embed " allowfullscreen></iframe>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="box last-box ">
+                    <h5 style="font-size: larger;font-weight: 900;color: aquamarine; ">Services</h5>
+                    <ul class="services-list ">
+                        <li style="border:2px solid wheat;border-radius: 50px;text-align: center;font-size: larger;font-weight: 700;text-decoration: none; ">Supply Foods</li>
+                        <li style="border:2px solid wheat;border-radius: 50px;text-align: center;font-size: larger;font-weight: 700;text-decoration: none; ">Caustomer Services</li>
+                        <li style="border:2px solid wheat;border-radius: 50px;text-align: center;font-size: larger;font-weight: 700;text-decoration: none; ">Supply Foods in All Occassions</li>
+                        <li style="border:2px solid wheat;border-radius: 50px;text-align: center;font-size: larger;font-weight: 700;text-decoration: none; "> Hygenic Foods</li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Function to toggle the first description
+    </script>
+
+
+    <script src=" https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js "></script>
+
+</body>
+
+
+<footer>
+
+
+</html>
